@@ -1,0 +1,71 @@
+name: 🐛 Bug Report
+description: Report a bug or unexpected behavior
+title: "[BUG] "
+labels: ["🐛 bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for reporting this bug! This helps us improve Shai-Hulud Detector.
+        
+  - type: textarea
+    id: description
+    attributes:
+      label: 📝 Description
+      description: Clear and concise description of the bug
+      placeholder: Describe what happened...
+    validations:
+      required: true
+      
+  - type: textarea
+    id: steps
+    attributes:
+      label: 🔄 Steps to Reproduce
+      description: Steps to reproduce the behavior
+      placeholder: |
+        1. Run the command '...'
+        2. Scan the directory '....'
+        3. See error
+    validations:
+      required: true
+      
+  - type: textarea
+    id: expected
+    attributes:
+      label: ✅ Expected Behavior
+      description: Describe what should happen
+    validations:
+      required: true
+      
+  - type: textarea
+    id: actual
+    attributes:
+      label: ❌ Actual Behavior
+      description: Describe what actually happens
+    validations:
+      required: true
+      
+  - type: textarea
+    id: environment
+    attributes:
+      label: 🖥️ Environment
+      description: Information about your environment
+      placeholder: |
+        - OS: [e.g. macOS 14.0]
+        - Node.js: [e.g. 18.17.0]
+        - Version: [e.g. 1.0.0]
+    validations:
+      required: true
+      
+  - type: textarea
+    id: logs
+    attributes:
+      label: 📋 Logs
+      description: Copy and paste relevant logs
+      render: shell
+      
+  - type: textarea
+    id: additional
+    attributes:
+      label: ℹ️ Additional Information
+      description: Any other useful information

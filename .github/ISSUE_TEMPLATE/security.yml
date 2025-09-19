@@ -1,0 +1,45 @@
+name: 🚨 Security Issue
+description: Report a security vulnerability (use privately)
+title: "[SECURITY] "
+labels: ["🚨 security"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ⚠️ **IMPORTANT**: For critical vulnerabilities, contact directly: contact@josedacosta.info
+        
+  - type: textarea
+    id: vulnerability
+    attributes:
+      label: 🔓 Vulnerability Description
+      description: Describe the security vulnerability
+    validations:
+      required: true
+      
+  - type: textarea
+    id: impact
+    attributes:
+      label: 💥 Potential Impact
+      description: What is the potential impact of this vulnerability?
+    validations:
+      required: true
+      
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: 🔄 Reproduction Steps
+      description: How to reproduce this vulnerability?
+    validations:
+      required: true
+      
+  - type: dropdown
+    id: severity
+    attributes:
+      label: 📊 Severity
+      options:
+        - Low
+        - Medium
+        - High
+        - Critical
+    validations:
+      required: true

@@ -1,0 +1,30 @@
+# 🛡️ Code Owners - Shai-Hulud Detector
+# https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/about-code-owners
+
+# Global ownership - José da Costa is the sole maintainer
+# All files require review and approval from @josedacosta
+* @josedacosta
+
+# Critical security files require extra attention
+/src/indicators.ts @josedacosta
+/src/detector.ts @josedacosta
+/src/reporter.ts @josedacosta
+
+# Configuration files
+/package.json @josedacosta
+/tsconfig.json @josedacosta
+/.eslintrc.js @josedacosta
+
+# GitHub configuration
+/.github/ @josedacosta
+
+# Documentation that affects security
+/README.md @josedacosta
+/CONTRIBUTING.md @josedacosta
+
+# Security-related documentation
+/news.md @josedacosta
+/solution.md @josedacosta
+
+# Build and deployment scripts
+/scripts/ @josedacosta

@@ -1,0 +1,80 @@
+# ===========================
+# Node.js Dependencies
+# ===========================
+node_modules/
+.npm
+.yarn-integrity
+
+# ===========================
+# TypeScript Build Output
+# ===========================
+dist/
+build/
+*.tsbuildinfo
+*.d.ts.map
+
+# ===========================
+# Development Tools & Cache
+# ===========================
+.eslintcache
+.cache
+
+# ===========================
+# Testing & Coverage
+# ===========================
+coverage/
+.nyc_output
+
+# ===========================
+# Environment Variables
+# ===========================
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# ===========================
+# Logs
+# ===========================
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ===========================
+# Operating System Files
+# ===========================
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# ===========================
+# IDE & Editor Files
+# ===========================
+.vscode-test
+.idea/
+
+# ===========================
+# Temporary Files
+# ===========================
+*.tmp
+*.temp
+temp/
+
+# ===========================
+# Project Specific
+# ===========================
+# Generated security reports
+shai-hulud-report-*.md
+shai-hulud-report-*.txt
+
+# Development and internal files
+jose/
+PROMPTS.md
+CLAUDE.md

@@ -1,0 +1,50 @@
+# Dependencies & Package Management
+node_modules/
+yarn.lock
+
+# Build & Compilation Outputs
+dist/
+
+# Test Coverage & Reports
+coverage/
+.nyc_output/
+*.lcov
+shai-hulud-report-*.md
+
+# IDE & Editor Configuration
+.idea/
+.vscode/
+
+# Version Control
+.git/
+
+# Cache & Temporary Files
+.cache/
+.tmp/
+tmp/
+*.log
+
+# Operating System Files
+.DS_Store
+._*
+.Trashes
+Thumbs.db
+
+# Configuration Files
+tsconfig.json
+.eslintrc.json
+.prettierrc
+.editorconfig
+.gitignore
+
+# License & Documentation
+LICENSE
+CHANGELOG.md
+CODE_OF_CONDUCT.md
+DISCLAIMER.md
+CONTRIBUTING.md
+README.md
+PROMPTS.md
+
+# Data Files
+src/data/

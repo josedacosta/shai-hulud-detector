@@ -1,0 +1,51 @@
+name: ✨ Feature Request
+description: Suggest a new feature or enhancement
+title: "[FEATURE] "
+labels: ["✨ feature"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for suggesting a new feature! 🚀
+        
+  - type: textarea
+    id: problem
+    attributes:
+      label: 🤔 Problem to Solve
+      description: Describe the problem this feature would solve
+      placeholder: I'm frustrated when...
+    validations:
+      required: true
+      
+  - type: textarea
+    id: solution
+    attributes:
+      label: 💡 Proposed Solution
+      description: Describe the solution you would like to see
+    validations:
+      required: true
+      
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: 🔄 Alternatives Considered
+      description: Describe alternative solutions you have considered
+      
+  - type: dropdown
+    id: priority
+    attributes:
+      label: 📊 Priority
+      options:
+        - Low
+        - Medium  
+        - High
+        - Critical
+    validations:
+      required: true
+      
+  - type: checkboxes
+    id: contribution
+    attributes:
+      label: 🤝 Contribution
+      options:
+        - label: I am ready to contribute to this feature
