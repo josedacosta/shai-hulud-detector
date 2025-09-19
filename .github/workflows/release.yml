@@ -5,6 +5,10 @@ on:
     tags:
       - 'v*'
 
+permissions:
+  contents: write
+  packages: write
+
 jobs:
   release:
     name: 📦 Create Release
@@ -26,31 +30,52 @@ jobs:
     - name: 🏗️ Build project
       run: yarn build
       
-    - name: 📝 Generate changelog
-      id: changelog
-      run: |
-        echo "changelog<<EOF" >> $GITHUB_OUTPUT
-        git log $(git describe --tags --abbrev=0 HEAD^)..HEAD --oneline >> $GITHUB_OUTPUT
-        echo "EOF" >> $GITHUB_OUTPUT
+    - name: 📝 Extract tag name
+      id: tag
+      run: echo "tag=${GITHUB_REF#refs/tags/}" >> $GITHUB_OUTPUT
         
     - name: 🚀 Create Release
-      uses: actions/create-release@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      uses: softprops/action-gh-release@v2
       with:
-        tag_name: ${{ github.ref }}
-        release_name: Release ${{ github.ref }}
+        tag_name: ${{ steps.tag.outputs.tag }}
+        name: Release ${{ steps.tag.outputs.tag }}
         body: |
-          ## 🎉 New Release
+          ## 🛡️ Shai-Hulud Detector ${{ steps.tag.outputs.tag }}
           
-          ### Changes
-          ${{ steps.changelog.outputs.changelog }}
+          ### ✨ Features
           
-          ### Installation
+          - **Complete security scanner** for detecting Shai-Hulud attack indicators in npm projects
+          - **Multi-indicator analysis** with severity scoring (LOW, MEDIUM, HIGH, CRITICAL)
+          - **Rich CLI interface** with colors, progress bars, and formatted output
+          - **Comprehensive detection** of malicious files, suspicious scripts, and system compromise
+          - **Automated reporting** with timestamped security reports in Markdown format
+          - **Cross-platform support** for Windows, macOS, and Linux environments
+          
+          ### 🚀 Installation & Usage
+          
           ```bash
-          npm install -g shai-hulud-detector
-          # or
-          yarn global add shai-hulud-detector
+          # Clone and install
+          git clone https://github.com/josedacosta/shai-hulud-detector.git
+          cd shai-hulud-detector
+          yarn install
+          yarn build
+          
+          # Run the scanner
+          yarn start
+          
+          # Scan specific directory
+          yarn start -d /path/to/scan
+          
+          # Non-interactive with JSON output
+          yarn start -d /path/to/scan --no-interactive --json
           ```
+          
+          ### 🛠️ Development
+          
+          - **Node.js**: >=18.0.0
+          - **Package Manager**: Yarn (required)
+          - **TypeScript**: ^5.3.3
+          - **Build Target**: ES2020
         draft: false
         prerelease: false
+        generate_release_notes: true
