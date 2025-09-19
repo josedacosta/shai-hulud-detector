@@ -1,8 +1,8 @@
 # 💰 Funding Configuration for Shai-Hulud Detector
 # https://docs.github.com/en/github/administering-a-repository/managing-repository-settings/displaying-a-sponsor-button-in-your-repository
 
-# GitHub sponsors
-github: josedacosta
+# GitHub sponsors - Uncomment when enrolled in GitHub Sponsors program
+# github: josedacosta
 
 # Other funding platforms
 custom: [ "https://www.buymeacoffee.com/josedacosta", "https://ko-fi.com/josedacosta" ]
