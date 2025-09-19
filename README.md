@@ -37,6 +37,8 @@
   </tr>
 </table>
 
+# Shai-Hulud Detector
+
 A detection tool for compromise indicators of the Shai-Hulud attack in npm projects.
 
 ## 📖 Description
